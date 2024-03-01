@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RetroFit API Ecommerce</string>
+    <string name="heyuser">It\'s time to shop your heart out!</string>
+    <string name="Exprtessdelivery"><b>Express delivery</b> might be available</string>
+    <string name="payondelivery"><b>Pay on delivery</b> might be available</string>
+    <string name="hasslefree"><b>Hassle free 7, 15, 30 days</b> Return &amp; Exchange \nmight be available</string>
+    <string name="tryandbuy"><b>Try &amp; Buy</b> might be available</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#383535">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#E2FFC107"
+        app:layout_constraintBottom_toTopOf="@id/bottomView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.8" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#9CFFFFFF"
+        app:cardCornerRadius="200dp"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@id/topView"
+        app:layout_constraintTop_toTopOf="@id/topView" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="V"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Valentine"
+        android:fontFamily="@font/lato_bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/emailDrawerNavLayout"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/emailDrawerNavLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="30dp"
+        android:text="valentine@gmail.com"
+        android:fontFamily="@font/lato"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/topView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        />
+
+    <View
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topView"
+        app:layout_constraintVertical_weight="2" />
+
+    <TextView
+        android:id="@+id/cartTextview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Cart"
+        android:fontFamily="@font/lato"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/cartImageHomeTopBar"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toTopOf="@+id/bottomView" />
+
+    <ImageView
+        android:id="@+id/cartImageHomeTopBar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="TODO"
+        android:padding="5dp"
+        android:src="@drawable/bag_white"
+        app:layout_constraintBottom_toBottomOf="@+id/cartTextview"
+        app:layout_constraintEnd_toEndOf="@+id/bottomView"
+        app:layout_constraintTop_toTopOf="@+id/cartTextview" />
+
+    <TextView
+        android:id="@+id/notificationTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Notification"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/likedImageHomeTopBar"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toBottomOf="@+id/cartTextview" />
+
+    <ImageView
+        android:id="@+id/notifyImageHomeTopBar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:src="@drawable/bellsvg_white"
+        app:layout_constraintBottom_toBottomOf="@+id/notificationTextView"
+        app:layout_constraintEnd_toEndOf="@+id/cartImageHomeTopBar"
+        app:layout_constraintTop_toTopOf="@id/notificationTextView" />
+
+    <TextView
+        android:id="@+id/favouritesTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:padding="10dp"
+        android:text="favourites"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/bottomView"
+        app:layout_constraintEnd_toStartOf="@+id/likedImageHomeTopBar"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toBottomOf="@+id/notificationTextView" />
+
+    <ImageView
+        android:id="@+id/likedImageHomeTopBar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:src="@drawable/baseline_favorite_border_white"
+        app:layout_constraintBottom_toBottomOf="@+id/favouritesTextView"
+        app:layout_constraintEnd_toEndOf="@+id/notifyImageHomeTopBar"
+        app:layout_constraintTop_toTopOf="@id/favouritesTextView" />
+
+    <TextView
+        android:id="@+id/paymentTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Payments"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/paymensImageHomeTopBar"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toBottomOf="@+id/favouritesTextView" />
+
+    <ImageView
+        android:id="@+id/paymensImageHomeTopBar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:src="@drawable/payments"
+        app:layout_constraintBottom_toBottomOf="@+id/paymentTextView"
+        app:layout_constraintEnd_toEndOf="@+id/notifyImageHomeTopBar"
+        app:layout_constraintTop_toTopOf="@id/paymentTextView" />
+
+    <TextView
+        android:id="@+id/settingsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Settings"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lato"
+        app:layout_constraintEnd_toStartOf="@id/settingsImageHomeTopBar"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toBottomOf="@+id/paymentTextView" />
+
+    <ImageView
+        android:id="@+id/settingsImageHomeTopBar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:src="@drawable/settings"
+        app:layout_constraintBottom_toBottomOf="@+id/settingsTextView"
+        app:layout_constraintEnd_toEndOf="@+id/notifyImageHomeTopBar"
+        app:layout_constraintTop_toTopOf="@id/settingsTextView" />
+    <TextView
+        android:id="@+id/logTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Logout"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lato"
+        app:layout_constraintEnd_toStartOf="@id/logImageHomeTopBar"
+        app:layout_constraintStart_toStartOf="@id/bottomView"
+        app:layout_constraintTop_toBottomOf="@+id/settingsTextView" />
+
+    <ImageView
+        android:id="@+id/logImageHomeTopBar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:src="@drawable/logout"
+        app:layout_constraintBottom_toBottomOf="@+id/logTextView"
+        app:layout_constraintEnd_toEndOf="@+id/notifyImageHomeTopBar"
+        app:layout_constraintTop_toTopOf="@id/logTextView" />
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#07000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:text="MADE WITH LOVE \u2665"
+        android:fontFamily="@font/lato_bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/view5"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@id/view5"
+        app:layout_constraintTop_toTopOf="@+id/view5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App Version 1.0.1"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lato"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

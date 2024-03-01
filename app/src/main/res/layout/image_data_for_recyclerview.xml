@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+
+    <View
+        android:id="@+id/viewDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:background="@drawable/order_view_white_bg"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--    android:background="#C0C0C0"-->
+    <!--        android:layout_height="wrap_content"-->
+
+    <ImageView
+        android:id="@+id/imageDataLayout"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:elevation="10dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="@id/viewDataLayout"
+        app:layout_constraintStart_toStartOf="@+id/viewDataLayout"
+        app:layout_constraintTop_toTopOf="@+id/viewDataLayout" />
+
+    <TextView
+        android:id="@+id/titleDataLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:elevation="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Title"
+        android:fontFamily="@font/lato_bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageDataLayout"
+        app:layout_constraintStart_toStartOf="@+id/imageDataLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imageDataLayout" />
+
+    <TextView
+        android:id="@+id/categoryDataLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:elevation="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Category"
+        android:fontFamily="@font/lato"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/titleDataLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/titleDataLayout"
+        app:layout_constraintTop_toBottomOf="@+id/titleDataLayout" />
+
+    <TextView
+        android:id="@+id/priceDataLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Price"
+        android:fontFamily="@font/lato_bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#377D3A"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/addToCartImageDataLayout"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/titleDataLayout"
+        app:layout_constraintTop_toBottomOf="@+id/categoryDataLayout" />
+
+    <ImageView
+        android:id="@+id/addToCartImageDataLayout"
+        android:layout_width="25dp"
+        android:layout_height="0dp"
+        android:padding="2dp"
+        android:background="@drawable/view_bg_round_theme"
+        android:elevation="20dp"
+        android:src="@drawable/baseline_add_white_symbol"
+        app:layout_constraintBottom_toBottomOf="@+id/priceDataLayout"
+        app:layout_constraintEnd_toEndOf="@+id/categoryDataLayout"
+        app:layout_constraintTop_toBottomOf="@+id/categoryDataLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+<!--    -->
+<!--    <ImageView-->
+<!--        android:id="@+id/imageDataLayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_marginStart="5dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="5dp"-->
+<!--        android:elevation="10dp"-->
+<!--        android:src="@drawable/ic_launcher_background"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/viewDataLayout"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/viewDataLayout"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/viewDataLayout" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView9"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:elevation="10dp"-->
+<!--        android:src="@drawable/baseline_favorite_border_red_"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/categoryDataLayout"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/imageDataLayout"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/categoryDataLayout"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/titleDataLayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:elevation="10dp"-->
+<!--        android:ellipsize="end"-->
+<!--        android:maxLines="2"-->
+<!--        android:text="Title"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/imageDataLayout"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/imageDataLayout"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/categoryDataLayout" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/descriptionDataLayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:elevation="10dp"-->
+<!--        android:ellipsize="end"-->
+<!--        android:maxLines="1"-->
+<!--        android:text="Description"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/titleDataLayout"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/titleDataLayout"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/titleDataLayout" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/priceDataLayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:elevation="10dp"-->
+<!--        android:ellipsize="end"-->
+<!--        android:maxLines="1"-->
+<!--        android:text="Price"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+<!--        android:textColor="#377D3A"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/titleDataLayout"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/titleDataLayout"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/descriptionDataLayout" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/categoryDataLayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:background="@drawable/background_category"-->
+<!--        android:elevation="10dp"-->
+<!--        android:gravity="center"-->
+<!--        android:paddingStart="5dp"-->
+<!--        android:paddingEnd="5dp"-->
+<!--        android:text="Category"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/imageView9"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/titleDataLayout"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imageDataLayout" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

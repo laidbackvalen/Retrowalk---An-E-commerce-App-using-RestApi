@@ -1,0 +1,162 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbarLayoutMain"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="#00FFFFFF"
+                android:fitsSystemWindows="true">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="#00FFFFFF"
+                    app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_collapseMode="none" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintInsideCollapsingLayoutMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00FFFFFF">
+
+                        <include
+                            android:id="@+id/homeIncludeLayout"
+                            layout="@layout/home_layout_top_bar"
+                            android:layout_width="0dp"
+                            android:layout_height="180dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00FFFFFF">
+
+                    <View
+                        android:id="@+id/searchView"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/searchbar_bg"
+                        android:elevation="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="30dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:elevation="10dp"
+                        android:src="@drawable/searchiconrecent"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                        app:layout_constraintStart_toStartOf="@id/searchView"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:elevation="10dp"
+                        android:gravity="start|center"
+                        android:paddingStart="10dp"
+                        android:text="Search for products"
+                        app:layout_constraintBottom_toBottomOf="@+id/searchView"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="@+id/searchView"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="30dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:elevation="10dp"
+                        android:src="@drawable/micrecent"
+                        app:layout_constraintBottom_toBottomOf="@id/cameraSearchBarImageViewHomeLayout"
+                        app:layout_constraintEnd_toStartOf="@id/cameraSearchBarImageViewHomeLayout"
+                        app:layout_constraintTop_toTopOf="@id/cameraSearchBarImageViewHomeLayout"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/cameraSearchBarImageViewHomeLayout"
+                        android:layout_width="40dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:elevation="10dp"
+                        android:src="@drawable/camerarecent"
+                        app:layout_constraintBottom_toBottomOf="@id/searchView"
+                        app:layout_constraintEnd_toEndOf="@id/searchView"
+                        app:layout_constraintTop_toTopOf="@id/searchView"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:fitsSystemWindows="true"
+                android:layout_margin="10dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/middleConstraints"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="@id/middleConstraints"
+                        app:layout_constraintEnd_toEndOf="@id/middleConstraints"
+                        app:layout_constraintStart_toStartOf="@id/middleConstraints"
+                        app:layout_constraintTop_toTopOf="@id/middleConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

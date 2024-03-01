@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="135dp">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_margin="2dp"
+        android:background="@drawable/order_view_white_bg"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/productImageCartItemLayoutTextView"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:elevation="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/female"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/titleCartItemLayoutTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="12dp"
+        android:elevation="10dp"
+        android:text="Title"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:fontFamily="@font/lato_bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/removeFromCartItemLayoutTextView"
+        app:layout_constraintStart_toEndOf="@+id/productImageCartItemLayoutTextView"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <ImageView
+        android:id="@id/removeFromCartItemLayoutTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:padding="2dp"
+        android:elevation="10dp"
+        android:src="@drawable/baseline_close_24"
+
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/trackNumberTextViewOrderFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:elevation="20dp"
+        android:text="Category :"
+        android:fontFamily="@font/lato"
+        android:textColor="#81000000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintStart_toStartOf="@+id/titleCartItemLayoutTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleCartItemLayoutTextView" />
+
+    <TextView
+        android:id="@+id/categoryCartItemLayoutTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/lato"
+        android:elevation="20dp"
+        android:text="Black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintBottom_toBottomOf="@+id/trackNumberTextViewOrderFragment"
+        app:layout_constraintStart_toEndOf="@+id/trackNumberTextViewOrderFragment"
+        app:layout_constraintTop_toTopOf="@+id/trackNumberTextViewOrderFragment"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/priceCartItemLayoutTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:paddingEnd="5dp"
+        android:text="4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        android:fontFamily="@font/lato"
+        app:layout_constraintBottom_toBottomOf="@+id/qtyNumberTextViewCart"
+        app:layout_constraintEnd_toEndOf="@+id/removeFromCartItemLayoutTextView"
+        app:layout_constraintTop_toTopOf="@+id/qtyNumberTextViewCart"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/inrTextViewOrderFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:elevation="20dp"
+        android:paddingEnd="5dp"
+        android:gravity="bottom"
+        android:text="INR."
+        android:fontFamily="@font/lato"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/priceCartItemLayoutTextView"
+        app:layout_constraintEnd_toStartOf="@id/priceCartItemLayoutTextView"
+        app:layout_constraintTop_toTopOf="@+id/priceCartItemLayoutTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/viewAddQuantity"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/view_circle_white_bg"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/trackNumberTextViewOrderFragment"
+        />
+
+
+    <ImageView
+        android:id="@+id/increaseQTYImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@+id/viewAddQuantity"
+        app:layout_constraintEnd_toEndOf="@+id/viewAddQuantity"
+        app:layout_constraintStart_toStartOf="@+id/viewAddQuantity"
+        app:layout_constraintTop_toTopOf="@+id/viewAddQuantity" />
+
+    <TextView
+        android:id="@+id/qtyNumberTextViewCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:layout_margin="10dp"
+        android:text="1"
+        android:fontFamily="@font/lato"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/viewAddQuantity"
+        app:layout_constraintStart_toEndOf="@+id/viewAddQuantity"
+        app:layout_constraintTop_toTopOf="@+id/viewAddQuantity" />
+
+    <View
+        android:id="@+id/viewReduceQuantity"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/view_circle_white_bg"
+        android:layout_marginStart="10dp"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewAddQuantity"
+        app:layout_constraintStart_toEndOf="@+id/qtyNumberTextViewCart"
+        app:layout_constraintTop_toTopOf="@+id/viewAddQuantity" />
+
+    <ImageView
+        android:id="@+id/decreaseQTYImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/baseline_horizontal_rule_24"
+        app:layout_constraintBottom_toBottomOf="@id/viewReduceQuantity"
+        app:layout_constraintStart_toStartOf="@id/viewReduceQuantity"
+        app:layout_constraintEnd_toEndOf="@id/viewReduceQuantity"
+        app:layout_constraintTop_toTopOf="@+id/viewReduceQuantity" />
+</androidx.constraintlayout.widget.ConstraintLayout>

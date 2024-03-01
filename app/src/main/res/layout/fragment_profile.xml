@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProfileFragment">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:text="My Profile"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/searchImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchImageView" />
+    <ImageView
+        android:id="@+id/searchImageView"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
+        android:padding="2dp"
+        android:elevation="20dp"
+        android:src="@drawable/searchiconrecent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollViewProfile"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/searchImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchImageView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/myprofileView"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="2dp"
+
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:background="#07000000"
+                app:layout_constraintEnd_toEndOf="@+id/myprofileView"
+                app:layout_constraintStart_toStartOf="@+id/myprofileView"
+                app:layout_constraintTop_toTopOf="@+id/myprofileView" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="20dp"
+                app:cardCornerRadius="200dp"
+                app:layout_constraintBottom_toBottomOf="@+id/myprofileView"
+                app:layout_constraintStart_toStartOf="@+id/myprofileView">
+
+                <ImageView
+                    android:id="@+id/imageViewInCardViewProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bgimg" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/nameProfileTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:elevation="2dp"
+                android:text="Valentine"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/cardView2"
+                app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
+            <TextView
+                android:id="@+id/emailProfileTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="2dp"
+                android:text="valentine1@gmail.com"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView2"
+                app:layout_constraintStart_toStartOf="@+id/nameProfileTextView"
+                app:layout_constraintTop_toBottomOf="@+id/nameProfileTextView" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/myprofileView"
+                app:layout_constraintStart_toStartOf="@+id/myprofileView"
+                app:layout_constraintTop_toBottomOf="@+id/myprofileView" />
+
+            <View
+                android:id="@+id/viewv1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toTopOf="@id/viewv2"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/shippingAddressTextViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:elevation="20dp"
+                android:text="Shipping addresses"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/shippingAddressCountTextViewProfile"
+                app:layout_constraintStart_toStartOf="@+id/viewv1"
+                app:layout_constraintTop_toTopOf="@+id/viewv1" />
+
+            <TextView
+                android:id="@+id/shippingAddressCountTextViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Address"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewv1"
+                app:layout_constraintStart_toStartOf="@+id/shippingAddressTextViewProfile"
+                app:layout_constraintTop_toBottomOf="@+id/shippingAddressTextViewProfile" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:elevation="20dp"
+                android:src="@drawable/baseline_navigate_next_24"
+                app:layout_constraintBottom_toBottomOf="@+id/shippingAddressCountTextViewProfile"
+                app:layout_constraintEnd_toEndOf="@+id/viewv1"
+                app:layout_constraintTop_toTopOf="@+id/shippingAddressTextViewProfile" />
+
+            <View
+                android:id="@+id/viewv2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:elevation="2dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toTopOf="@id/viewv3"
+                app:layout_constraintEnd_toEndOf="@+id/viewv1"
+                app:layout_constraintStart_toStartOf="@+id/viewv1"
+                app:layout_constraintTop_toBottomOf="@+id/viewv1" />
+
+            <TextView
+                android:id="@+id/paymentTextViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:elevation="20dp"
+                android:text="Payment methods"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/paymentCountTextViewProfile"
+                app:layout_constraintStart_toStartOf="@+id/viewv2"
+                app:layout_constraintTop_toTopOf="@+id/viewv2" />
+
+            <TextView
+                android:id="@+id/paymentCountTextViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                android:text="Visa **34"
+                app:layout_constraintBottom_toBottomOf="@+id/viewv2"
+                app:layout_constraintStart_toStartOf="@+id/paymentTextViewProfile"
+                app:layout_constraintTop_toBottomOf="@+id/paymentTextViewProfile" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:elevation="20dp"
+                android:src="@drawable/baseline_navigate_next_24"
+                app:layout_constraintBottom_toBottomOf="@+id/paymentCountTextViewProfile"
+                app:layout_constraintEnd_toEndOf="@+id/viewv2"
+                app:layout_constraintTop_toTopOf="@+id/paymentTextViewProfile" />
+
+            <View
+                android:id="@+id/viewv3"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:elevation="2dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toTopOf="@+id/viewv4"
+                app:layout_constraintEnd_toEndOf="@+id/viewv2"
+                app:layout_constraintStart_toStartOf="@+id/viewv2"
+                app:layout_constraintTop_toBottomOf="@+id/viewv2" />
+
+            <TextView
+                android:id="@+id/myReviewsTextViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="My reviews"
+                android:elevation="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/myReviewsCountTextViewProfile"
+                app:layout_constraintStart_toStartOf="@+id/viewv3"
+                app:layout_constraintTop_toTopOf="@+id/viewv3" />
+
+            <TextView
+                android:id="@+id/myReviewsCountTextViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reviews for 4 items"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewv3"
+                app:layout_constraintStart_toStartOf="@+id/myReviewsTextViewProfile"
+                app:layout_constraintTop_toBottomOf="@+id/myReviewsTextViewProfile" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:elevation="20dp"
+                android:src="@drawable/baseline_navigate_next_24"
+                app:layout_constraintBottom_toBottomOf="@+id/myReviewsCountTextViewProfile"
+                app:layout_constraintEnd_toEndOf="@+id/viewv3"
+                app:layout_constraintTop_toTopOf="@+id/myReviewsTextViewProfile" />
+
+            <View
+                android:id="@+id/viewv4"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="2dp"
+                android:elevation="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="@+id/viewv3"
+                app:layout_constraintStart_toStartOf="@+id/viewv3"
+                app:layout_constraintTop_toBottomOf="@+id/viewv3" />
+
+            <TextView
+                android:id="@+id/settingsTextViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Settings"
+                android:elevation="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/settingsCountTextViewProfile"
+                app:layout_constraintStart_toStartOf="@+id/viewv4"
+                app:layout_constraintTop_toTopOf="@+id/viewv4" />
+
+            <TextView
+                android:id="@+id/settingsCountTextViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification, password"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewv4"
+                app:layout_constraintStart_toStartOf="@+id/settingsTextViewProfile"
+                app:layout_constraintTop_toBottomOf="@+id/settingsTextViewProfile" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:elevation="20dp"
+                android:src="@drawable/baseline_navigate_next_24"
+                app:layout_constraintBottom_toBottomOf="@+id/settingsCountTextViewProfile"
+                app:layout_constraintEnd_toEndOf="@+id/viewv4"
+                app:layout_constraintTop_toTopOf="@+id/settingsTextViewProfile" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:background="#07000000"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/viewv4"
+                app:layout_constraintStart_toStartOf="@+id/viewv4"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/faqsTextViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:padding="5dp"
+                android:text="FAQs"
+                android:textStyle="bold"
+                android:textColor="#828282"
+                app:layout_constraintTop_toTopOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="@id/view4"
+                app:layout_constraintBottom_toTopOf="@id/aboutUsTextViewProfile" />
+
+            <TextView
+                android:id="@+id/aboutUsTextViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABOUT US"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="#828282"
+                app:layout_constraintBottom_toTopOf="@id/termsOfUseTextViewProfile"
+                app:layout_constraintStart_toStartOf="@+id/faqsTextViewProfile"
+                app:layout_constraintTop_toBottomOf="@+id/faqsTextViewProfile" />
+
+            <TextView
+                android:id="@+id/termsOfUseTextViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TERMS OF USE"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="#828282"
+                app:layout_constraintBottom_toTopOf="@+id/privacyPolicyViewProfile"
+                app:layout_constraintStart_toStartOf="@+id/faqsTextViewProfile"
+                app:layout_constraintTop_toBottomOf="@+id/aboutUsTextViewProfile" />
+
+            <TextView
+                android:id="@+id/privacyPolicyViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRIVACY POLICY"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:textColor="#828282"
+                app:layout_constraintBottom_toBottomOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="@+id/faqsTextViewProfile"
+                app:layout_constraintTop_toBottomOf="@+id/termsOfUseTextViewProfile" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#07000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintStart_toStartOf="@+id/view4"
+                app:layout_constraintTop_toBottomOf="@+id/view4"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:padding="5dp"
+                android:text="MADE WITH LOVE \u2665"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/view5"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="@id/view5"
+                app:layout_constraintTop_toTopOf="@+id/view5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Version 1.0.1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintEnd_toEndOf="@+id/textView7"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

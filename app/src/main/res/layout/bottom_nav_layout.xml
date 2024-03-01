@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bottomview_bg"
+    android:layout_width="match_parent"
+    android:elevation="20dp"
+    android:layout_height="55dp">
+
+    <View
+        android:id="@+id/viewBottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/view2BottomNavLayout"/>
+
+    <ImageView
+        android:id="@+id/homeimageBottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/baseline_home_filled_24"
+        app:layout_constraintBottom_toTopOf="@id/homeTextBottomNavLayout"
+        app:layout_constraintEnd_toEndOf="@+id/viewBottomNavLayout"
+        app:layout_constraintStart_toStartOf="@+id/viewBottomNavLayout"
+        app:layout_constraintTop_toTopOf="@id/viewBottomNavLayout" />
+
+    <TextView
+        android:id="@+id/homeTextBottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Home"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBottomNavLayout"
+        app:layout_constraintEnd_toEndOf="@+id/homeimageBottomNavLayout"
+        app:layout_constraintStart_toStartOf="@+id/homeimageBottomNavLayout"
+        app:layout_constraintTop_toBottomOf="@+id/homeimageBottomNavLayout" />
+
+    <View
+        android:id="@+id/view2BottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/viewBottomNavLayout"
+        app:layout_constraintEnd_toStartOf="@id/view3BottomNavLayout"
+        app:layout_constraintTop_toTopOf="@id/viewBottomNavLayout"
+        app:layout_constraintStart_toEndOf="@id/viewBottomNavLayout"/>
+
+    <ImageView
+        android:id="@+id/categoryimageBottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/category"
+        app:layout_constraintBottom_toTopOf="@id/orderTextBottomNavLayout"
+        app:layout_constraintEnd_toEndOf="@+id/view2BottomNavLayout"
+        app:layout_constraintStart_toStartOf="@id/view2BottomNavLayout"
+        app:layout_constraintTop_toTopOf="@id/view2BottomNavLayout" />
+
+    <TextView
+        android:id="@+id/categoryTextBottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Categories"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/view2BottomNavLayout"
+        app:layout_constraintEnd_toEndOf="@+id/categoryimageBottomNavLayout"
+        app:layout_constraintStart_toStartOf="@+id/categoryimageBottomNavLayout"
+        app:layout_constraintTop_toBottomOf="@+id/categoryimageBottomNavLayout" />
+
+    <View
+        android:id="@+id/view3BottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/view4BottomNavLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view2BottomNavLayout"/>
+
+    <ImageView
+        android:id="@+id/ordersImageBottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/orderbox"
+        app:layout_constraintBottom_toTopOf="@id/orderTextBottomNavLayout"
+        app:layout_constraintEnd_toEndOf="@+id/view3BottomNavLayout"
+        app:layout_constraintStart_toStartOf="@id/view3BottomNavLayout"
+        app:layout_constraintTop_toTopOf="@id/viewBottomNavLayout" />
+
+    <TextView
+        android:id="@+id/orderTextBottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Orders"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/view3BottomNavLayout"
+        app:layout_constraintEnd_toEndOf="@+id/ordersImageBottomNavLayout"
+        app:layout_constraintStart_toStartOf="@+id/ordersImageBottomNavLayout"
+        app:layout_constraintTop_toBottomOf="@+id/ordersImageBottomNavLayout" />
+
+    <View
+        android:id="@+id/view4BottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/viewBottomNavLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/viewBottomNavLayout"
+        app:layout_constraintStart_toEndOf="@id/view3BottomNavLayout"/>
+
+    <ImageView
+        android:id="@+id/profileimageBottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/baseline_person_24"
+        app:layout_constraintBottom_toTopOf="@id/profileTextBottomNavLayout"
+        app:layout_constraintEnd_toEndOf="@+id/view4BottomNavLayout"
+        app:layout_constraintStart_toStartOf="@id/view4BottomNavLayout"
+        app:layout_constraintTop_toTopOf="@id/view4BottomNavLayout" />
+
+    <TextView
+        android:id="@+id/profileTextBottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Profile"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view4BottomNavLayout"
+        app:layout_constraintEnd_toEndOf="@+id/profileimageBottomNavLayout"
+        app:layout_constraintStart_toStartOf="@+id/profileimageBottomNavLayout"
+        app:layout_constraintTop_toBottomOf="@+id/profileimageBottomNavLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

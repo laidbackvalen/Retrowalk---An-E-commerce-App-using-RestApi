@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.CategoriesFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="100dp"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbarLayout"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="50dp"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_collapseMode="none" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/topViewHomeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center|left"
+                        android:paddingStart="15dp"
+                        android:text="Categories"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/topViewHomeLayout"
+                        app:layout_constraintEnd_toStartOf="@+id/notificationImageHomeTopBar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/topViewHomeLayout" />
+
+                    <ImageView
+                        android:id="@+id/cartImageCategoryTopBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="15dp"
+                        android:padding="5dp"
+                        android:src="@drawable/baseline_add_shopping_cart_24"
+                        app:layout_constraintBottom_toBottomOf="@id/topViewHomeLayout"
+                        app:layout_constraintEnd_toEndOf="@id/topViewHomeLayout"
+                        app:layout_constraintTop_toTopOf="@+id/topViewHomeLayout"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/notificationImageHomeTopBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/baseline_notifications_none_24"
+                        app:layout_constraintBottom_toBottomOf="@id/topViewHomeLayout"
+                        app:layout_constraintEnd_toStartOf="@+id/cartImageCategoryTopBar"
+                        app:layout_constraintTop_toTopOf="@id/topViewHomeLayout"
+                        app:layout_constraintVertical_bias="0.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="50dp">
+
+                <View
+                    android:id="@+id/searchViewCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/searchbar_bg"
+                    android:elevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="30dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/searchiconrecent"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintStart_toStartOf="@id/searchViewCategories"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:elevation="10dp"
+                    android:gravity="start|center"
+                    android:paddingStart="10dp"
+                    android:text="Search for products"
+                    app:layout_constraintBottom_toBottomOf="@+id/searchViewCategories"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="@+id/searchViewCategories" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/micrecent"
+                    app:layout_constraintBottom_toBottomOf="@id/cameraSearchBarImageViewHomeLayout"
+                    app:layout_constraintEnd_toStartOf="@id/cameraSearchBarImageViewHomeLayout"
+                    app:layout_constraintTop_toTopOf="@id/cameraSearchBarImageViewHomeLayout"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/cameraSearchBarImageViewHomeLayout"
+                    android:layout_width="40dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/camerarecent"
+                    app:layout_constraintBottom_toBottomOf="@id/searchViewCategories"
+                    app:layout_constraintEnd_toEndOf="@id/searchViewCategories"
+                    app:layout_constraintTop_toTopOf="@id/searchViewCategories"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintsInsidenestedView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:fillViewport="true"
+                    android:fitsSystemWindows="true"
+                    android:scrollbars="none"
+                    app:layout_constraintEnd_toEndOf="@id/constraintsInsidenestedView"
+                    app:layout_constraintStart_toStartOf="@id/constraintsInsidenestedView"
+                    app:layout_constraintTop_toTopOf="@id/constraintsInsidenestedView">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintUnderhorizontalScrollView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardCategorySix"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="15dp"
+                            app:cardCornerRadius="60dp"
+                            app:layout_constraintBottom_toBottomOf="@id/cardCategoryFive"
+                            app:layout_constraintEnd_toStartOf="@+id/cardCategoryOne"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/cardCategoryFive">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/theme"
+                                android:gravity="center"
+                                android:text="All"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/white" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/hipHop"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:text="All"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="@+id/trendingText"
+                            app:layout_constraintEnd_toEndOf="@id/cardCategorySix"
+                            app:layout_constraintStart_toStartOf="@id/cardCategorySix"
+                            app:layout_constraintTop_toTopOf="@+id/topChartsText" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardCategoryOne"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="5dp"
+                            app:cardCornerRadius="60dp"
+                            app:layout_constraintBottom_toTopOf="@id/trendingText"
+                            app:layout_constraintEnd_toStartOf="@id/cardCategoryTwo"
+                            app:layout_constraintStart_toEndOf="@id/cardCategorySix"
+                            app:layout_constraintTop_toTopOf="@id/constraintUnderhorizontalScrollView1">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fitsSystemWindows="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/malee" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/trendingText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Male"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="@id/constraintUnderhorizontalScrollView1"
+                            app:layout_constraintEnd_toEndOf="@id/cardCategoryOne"
+                            app:layout_constraintStart_toStartOf="@id/cardCategoryOne"
+                            app:layout_constraintTop_toBottomOf="@id/cardCategoryOne" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardCategoryTwo"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="15dp"
+                            app:cardCornerRadius="60dp"
+                            app:layout_constraintBottom_toBottomOf="@id/cardCategoryOne"
+                            app:layout_constraintEnd_toStartOf="@id/cardCategoryThree"
+                            app:layout_constraintStart_toEndOf="@id/cardCategoryOne"
+                            app:layout_constraintTop_toTopOf="@id/cardCategoryOne">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/female" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/topChartsText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Female"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="@+id/trendingText"
+                            app:layout_constraintEnd_toEndOf="@id/cardCategoryTwo"
+                            app:layout_constraintStart_toStartOf="@id/cardCategoryTwo"
+                            app:layout_constraintTop_toTopOf="@+id/trendingText" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardCategoryThree"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="15dp"
+                            app:cardCornerRadius="60dp"
+                            app:layout_constraintBottom_toBottomOf="@id/cardCategoryTwo"
+                            app:layout_constraintEnd_toStartOf="@id/cardCategoryFour"
+                            app:layout_constraintStart_toEndOf="@id/cardCategoryTwo"
+                            app:layout_constraintTop_toTopOf="@id/cardCategoryTwo">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/kids" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/weeklyText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Kids"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="@+id/trendingText"
+                            app:layout_constraintEnd_toEndOf="@id/cardCategoryThree"
+                            app:layout_constraintStart_toStartOf="@id/cardCategoryThree"
+                            app:layout_constraintTop_toTopOf="@+id/topChartsText" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardCategoryFour"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="15dp"
+                            app:cardCornerRadius="60dp"
+                            app:layout_constraintBottom_toBottomOf="@id/cardCategoryThree"
+                            app:layout_constraintEnd_toStartOf="@id/cardCategoryFive"
+                            app:layout_constraintStart_toEndOf="@id/cardCategoryThree"
+                            app:layout_constraintTop_toTopOf="@id/cardCategoryThree">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/jwel" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/favoriteText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Jewelery"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="@+id/trendingText"
+                            app:layout_constraintEnd_toEndOf="@id/cardCategoryFour"
+                            app:layout_constraintStart_toStartOf="@id/cardCategoryFour"
+                            app:layout_constraintTop_toTopOf="@+id/topChartsText" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardCategoryFive"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="5dp"
+                            app:cardCornerRadius="60dp"
+                            app:layout_constraintBottom_toBottomOf="@id/cardCategoryFour"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/cardCategoryFour"
+                            app:layout_constraintTop_toTopOf="@id/cardCategoryFour">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/electronics" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/countrySpecialText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:text="Electronics"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="@+id/trendingText"
+                            app:layout_constraintEnd_toEndOf="@id/cardCategoryFive"
+                            app:layout_constraintStart_toStartOf="@id/cardCategoryFive"
+                            app:layout_constraintTop_toTopOf="@+id/topChartsText" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerCategoryFragment"
+                    android:layout_width="0dp"
+                    android:layout_height="190dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/horizontalScrollView"
+                    app:layout_constraintStart_toStartOf="@+id/horizontalScrollView"
+                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/brandsall"
+                    app:layout_constraintEnd_toEndOf="@+id/horizontalScrollView"
+                    app:layout_constraintStart_toStartOf="@+id/horizontalScrollView"
+                    app:layout_constraintTop_toBottomOf="@+id/viewPagerCategoryFragment" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="700dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/imageView3"
+                    app:layout_constraintStart_toStartOf="@id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

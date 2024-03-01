@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.OrdersFragment">
+
+    <View
+        android:id="@+id/topViewCartLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|left"
+        android:paddingStart="15dp"
+        android:text="Orders"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/topViewCartLayout"
+        app:layout_constraintEnd_toStartOf="@+id/searchImageOrderFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topViewCartLayout" />
+
+    <ImageView
+        android:id="@+id/searchImageOrderFragment"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:padding="2dp"
+        android:src="@drawable/searchiconrecent"
+        app:layout_constraintBottom_toBottomOf="@id/topViewCartLayout"
+        app:layout_constraintEnd_toEndOf="@id/topViewCartLayout"
+        app:layout_constraintTop_toTopOf="@+id/topViewCartLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/textview_bg_order_fragment"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="5dp"
+        android:text="Delivered"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/textView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topViewCartLayout" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="5dp"
+        android:text="Processing"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toStartOf="@id/textView7"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="5dp"
+        android:text="Cancelled"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/orders"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/orderNumberTextViewOrderFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:elevation="20dp"
+        android:text="Order No. 123456789"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/dateTextViewOrderFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:text="05-12-2023"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#81000000"
+        app:layout_constraintBottom_toBottomOf="@+id/orderNumberTextViewOrderFragment"
+        app:layout_constraintEnd_toEndOf="@+id/totalAmountTextViewOrderFragment"
+
+        app:layout_constraintTop_toTopOf="@+id/orderNumberTextViewOrderFragment" />
+
+    <TextView
+        android:id="@+id/trackNumberTextViewOrderFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:elevation="20dp"
+        android:text="Tracking number :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#81000000"
+        app:layout_constraintStart_toStartOf="@+id/orderNumberTextViewOrderFragment"
+        app:layout_constraintTop_toBottomOf="@+id/orderNumberTextViewOrderFragment" />
+
+    <TextView
+        android:id="@+id/trackingNumberTextViewOrderFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="20dp"
+        android:text="ON234567890046"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/trackNumberTextViewOrderFragment"
+        app:layout_constraintStart_toEndOf="@+id/trackNumberTextViewOrderFragment"
+        app:layout_constraintTop_toTopOf="@+id/trackNumberTextViewOrderFragment"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/qtyNumberTextViewOrderFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="20dp"
+        android:text="Quantity :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#81000000"
+        app:layout_constraintStart_toStartOf="@+id/orderNumberTextViewOrderFragment"
+        app:layout_constraintTop_toBottomOf="@+id/trackNumberTextViewOrderFragment" />
+
+    <TextView
+        android:id="@+id/QuantityNumbersTextViewOrderFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:elevation="20dp"
+        android:text="4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/qtyNumberTextViewOrderFragment"
+        app:layout_constraintStart_toEndOf="@+id/qtyNumberTextViewOrderFragment"
+        app:layout_constraintTop_toTopOf="@+id/qtyNumberTextViewOrderFragment"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/totalTextViewOrderFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:elevation="20dp"
+        android:text="Total Amount :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#81000000"
+        app:layout_constraintBottom_toBottomOf="@+id/QuantityNumbersTextViewOrderFragment"
+        app:layout_constraintEnd_toStartOf="@+id/totalAmountTextViewOrderFragment"
+        app:layout_constraintTop_toTopOf="@+id/QuantityNumbersTextViewOrderFragment" />
+
+    <TextView
+        android:id="@+id/totalAmountTextViewOrderFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:elevation="20dp"
+        android:text="INR 112"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/totalTextViewOrderFragment"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/totalTextViewOrderFragment"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/detailsTextViewOrderFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textview_black_stroke_fill_white_bg"
+        android:elevation="10dp"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="10dp"
+        android:text="Details"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/qtyNumberTextViewOrderFragment"
+        app:layout_constraintTop_toBottomOf="@+id/qtyNumberTextViewOrderFragment" />
+
+    <TextView
+        android:id="@+id/statusTextViewOrderFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:elevation="20dp"
+        android:text="Delivered"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#377D3A"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/detailsTextViewOrderFragment"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/detailsTextViewOrderFragment"
+        app:layout_constraintVertical_bias="0.286" />
+
+    <View
+        android:id="@+id/viewLogin"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:background="@drawable/view_bg_top_radius_20dp"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/LottieAdmin"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="5dp"
+        android:elevation="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textEnterPhone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textEnterPhone"
+        app:layout_constraintTop_toTopOf="@id/viewLogin"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/adminlottie" />
+
+    <TextView
+        android:id="@+id/textEnterPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:elevation="20dp"
+        android:fontFamily="@font/lato"
+        android:text="Enter Your Email Address"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#383535"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LottieAdmin" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edittext_border"
+        android:elevation="20dp"
+        android:fontFamily="@font/lato"
+        android:inputType="textEmailAddress"
+        android:paddingStart="12dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="10dp"
+        android:textColor="#232F34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="3.9"
+        app:layout_constraintStart_toStartOf="@+id/viewLogin"
+        app:layout_constraintTop_toBottomOf="@+id/textEnterPhone"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@color/white"
+        android:elevation="20dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="Email"
+        android:textAlignment="center"
+        android:textColor="#383535"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextEmail"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmail" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edittext_border"
+        android:elevation="20dp"
+        android:fontFamily="@font/lato"
+        android:inputType="textPassword"
+        android:paddingStart="12dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="10dp"
+        android:textColor="#232F34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="3.9"
+        app:layout_constraintStart_toStartOf="@+id/viewLogin"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@color/white"
+        android:elevation="20dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="Password"
+        android:textAlignment="center"
+        android:textColor="#383535"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="@+id/editTextPassword" />
+
+
+    <TextView
+        android:id="@+id/letMeInButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#383535"
+        android:elevation="20dp"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewLogin"
+        app:layout_constraintEnd_toEndOf="@+id/letMeInButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letMeInButton" />
+
+    <TextView
+        android:id="@+id/textNewUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:fontFamily="@font/lato"
+        android:gravity="right"
+        android:text="New User?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#383535"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toStartOf="@+id/textRegisterHere"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/textRegisterHere"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:elevation="20dp"
+        android:fontFamily="@font/lato"
+        android:text="REGISTER HERE"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#C43127"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textNewUser"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toEndOf="@+id/textNewUser"
+        app:layout_constraintTop_toTopOf="@+id/textNewUser" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
